@@ -115,3 +115,26 @@ def plot_dates_by_fishlist(dates_d, fishlist):
 #print plot_dates_by_fishlist(dates_d, ['ahi', 'sole', 'salmon']) 
 print plot_dates_by_fishlist(dates_d, dates_d.keys()) 
 
+# test 1
+x = get_fishes_by_date(fish_d, '1/1')
+assert 'salmon' in x
+
+###
+
+# test 2
+x = get_dates_by_fish(dates_d, 'salmon')
+assert '1/1' in x
+assert '1/2' in x
+
+###
+
+# test 3
+x = get_fishes_by_datelist(fish_d, ['1/1'])
+assert 'salmon' in x, x
+
+###
+
+# test 4
+x = get_dates_by_fishlist(fish_d, ['salmon'])
+assert '1/1' in x
+
