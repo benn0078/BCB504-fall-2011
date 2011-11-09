@@ -75,7 +75,7 @@ dates_d = make_dates_dict(fish_d)
 def get_fishes_by_datelist(fish_d, datelist):
 	fishlist = []
 	for date in datelist: 
-		fishlist.append(get_fishes_by_date(fish_d, date))
+		fishlist.extend(get_fishes_by_date(fish_d, date))
 	return fishlist
 
 #print get_fishes_by_datelist(fish_d, ['1/1', '3/5', '6/7'])
@@ -136,6 +136,6 @@ assert 'salmon' in x, x
 ###
 
 # test 4
-#x = get_dates_by_fishlist(fish_d, ['salmon'])
-#assert '1/1' in x
-
+x = get_dates_by_fishlist(fish_d, ['salmon'])
+assert '1/1' in x
+#print x
