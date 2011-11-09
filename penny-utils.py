@@ -136,6 +136,6 @@ assert 'salmon' in x, x
 ###
 
 # test 4
-x = get_dates_by_fishlist(fish_d, ['salmon'])
+x = get_dates_by_fishlist(dates_d, ['salmon'])
 assert '1/1' in x
 #print x
